@@ -1,5 +1,8 @@
-import react from 'react';
+// HelloWorld.js
+import React from 'react';
 
-export default function Block() {
-    return <h1>Hello World</h1>;
-}
+const HelloWorld = () => {
+    return <div>Hello, World!</div>;
+};
+
+export default HelloWorld;
