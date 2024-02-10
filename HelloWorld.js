@@ -1,8 +1,11 @@
-// HelloWorld.js
-import React from 'react';
-
-const HelloWorld = () => {
-    return <div>Hello, World!</div>;
-};
-
-export default HelloWorld;
+// remoteComponent.js
+(function () {
+    window.remoteComponent = {
+        render: function (containerId, content) {
+            const container = document.getElementById(containerId);
+            if (container) {
+                container.innerHTML = `<div>${content}</div>`;
+            }
+        }
+    };
+})();
