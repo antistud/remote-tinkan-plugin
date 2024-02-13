@@ -37,40 +37,38 @@
 
             function Block(props) {
                 return (
-                    <div onclick="tinkan.close()">
-                        <h1>Hello, {props.name}</h1>
-
+                    `
+                    <div id="block-${props.item.$id}" onclick="window.dispatchEvent(new CustomEvent('remoteComponentClick', { detail: { id: '${props.item.$id}' } }))">
+                        <h1>Hello, ${props.item.name}</h1>
                     </div>
+                    `
                 );
             }
 
             function Page(props) {
-                return (
+                return (`
                     <div>
                         <h1>Hello, {props.name} Page</h1>
                     </div>
+                    `
                 );
             }
 
             function Edit(props) {
                 return (
-                    <div>
+                    `<div>
                         <h1>Hello, {props.name} Edit</h1>
                     </div>
-                );
+                `);
             }
 
             function Create(props) {
                 return (
-                    <div>
+                    `<div>
                         <h1>Hello, {props.name} Create</h1>
                     </div>
-                );
+                `);
             }
-
-
-
-
 
 
             const container = document.getElementById(containerId);
